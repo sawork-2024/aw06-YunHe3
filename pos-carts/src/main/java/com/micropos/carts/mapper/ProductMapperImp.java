@@ -1,14 +1,14 @@
-package com.micropos.products.mapper;
+package com.micropos.carts.mapper;
 
 
 import com.micropos.model.ProductDto;
-import com.micropos.products.model.Product;
+import com.micropos.carts.model.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collection;
 @Component
-public class ProductMapperImp implements ProductMapper{
+public class ProductMapperImp implements ProductMapper {
     @Override
     public Collection<ProductDto> toProductsDto(Collection<Product> products) {
         ArrayList<ProductDto> productDtos = new ArrayList<>();
@@ -30,7 +30,7 @@ public class ProductMapperImp implements ProductMapper{
     @Override
     public Product toProduct(ProductDto productDto) {
         Product product = new Product();
-        product.setId(Long.parseLong(productDto.getId()));
+        product.setId(productDto.getId());
         product.setImg(product.getImg());
         product.setName(productDto.getName());
         product.setPrice(productDto.getPrice());
@@ -40,7 +40,7 @@ public class ProductMapperImp implements ProductMapper{
     @Override
     public ProductDto toProductDto(Product product) {
         ProductDto productDto = new ProductDto();
-        productDto.setId(product.getId().toString());
+        productDto.setId(product.getId());
         productDto.setImg(product.getImg());
         productDto.setName(product.getName());
         productDto.setPrice(product.getPrice());

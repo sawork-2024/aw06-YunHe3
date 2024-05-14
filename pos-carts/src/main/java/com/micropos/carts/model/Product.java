@@ -1,4 +1,4 @@
-package com.micropos.products.model;
+package com.micropos.carts.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -16,8 +16,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "products")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
     private String name;
     private Double price;
     private String img;

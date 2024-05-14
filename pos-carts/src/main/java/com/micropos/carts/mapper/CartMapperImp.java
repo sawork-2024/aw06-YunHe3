@@ -2,10 +2,8 @@ package com.micropos.carts.mapper;
 
 import com.micropos.carts.model.Cart;
 import com.micropos.carts.model.CartItem;
-import com.micropos.products.mapper.ProductMapper;
 import com.micropos.model.CartDto;
 import com.micropos.model.CartItemDto;
-import com.micropos.products.mapper.ProductMapperImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,7 +13,8 @@ import java.util.Collection;
 @Component
 public class CartMapperImp implements CartMapper{
 
-    private final ProductMapper productMapper = new ProductMapperImp();
+    @Autowired
+    ProductMapper productMapper;
 
     @Override
     public CartItemDto toCartItemDto(CartItem cartItem) {

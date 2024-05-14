@@ -84,7 +84,7 @@ public class JDRepository implements ProductRepository {
             if (title.indexOf("，") >= 0)
                 title = title.substring(0, title.indexOf("，"));
 
-            Product product = new Product(id, title, Double.parseDouble(price), img);
+            Product product = new Product(Long.parseLong(id), title, Double.parseDouble(price), img);
 
             list.add(product);
         }
