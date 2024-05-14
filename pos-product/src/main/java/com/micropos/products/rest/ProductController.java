@@ -4,6 +4,7 @@ import com.micropos.api.ProductsApi;
 import com.micropos.model.ProductDto;
 import com.micropos.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import com.micropos.products.mapper.ProductMapper;
@@ -26,6 +27,7 @@ public class ProductController implements ProductsApi {
     }
 
     @Override
+    @LoadBalanced
     public ResponseEntity<ProductDto> getProductById(String productId) {
         return ResponseEntity.ok(productMapper.toProductDto(productService.product(productId)));
     }

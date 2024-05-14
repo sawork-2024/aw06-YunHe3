@@ -1,0 +1,11 @@
+com/micropos/products/service/ProductServiceImp.class
+com/micropos/products/service/ProductService.class
+com/micropos/products/repository/ProductRepository.class
+com/micropos/products/db/RedisService.class
+com/micropos/products/model/Product.class
+com/micropos/products/mapper/ProductMapper.class
+com/micropos/products/ProductsApplication.class
+com/micropos/products/repository/JDRepository.class
+com/micropos/products/rest/ProductController.class
+com/micropos/products/mapper/ProductMapperImp.class
+com/micropos/products/db/RedisConfig.class

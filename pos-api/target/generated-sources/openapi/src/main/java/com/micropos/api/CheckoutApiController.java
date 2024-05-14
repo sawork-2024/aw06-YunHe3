@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-05-14T18:40:21.838381+08:00[Asia/Shanghai]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-05-14T21:04:56.395113+08:00[Asia/Shanghai]")
 @Controller
 @RequestMapping("${openapi.microPos.base-path:/api}")
 public class CheckoutApiController implements CheckoutApi {
